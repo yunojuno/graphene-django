@@ -13,6 +13,8 @@ jobs:
         include:
           - django: "1.11"
             python-version: "2.7"
+          - toxenv: "flake8"
+            python-version: "3.8"
 
     steps:
     - uses: actions/checkout@v1
@@ -28,3 +30,4 @@ jobs:
       run: tox
       env:
         DJANGO: ${{ matrix.django }}
+        TOXENV: ${{ matrix.toxenv }}
