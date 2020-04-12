@@ -191,15 +191,6 @@ class ModelFormMutationTests(TestCase):
         self.assertIn("client_mutation_id", PetMutation.Input._meta.fields)
         self.assertNotIn("id", PetMutation.Input._meta.fields)
 
-    def test_return_field_name_is_camelcased(self):
-        class FilmDetailsMutation(DjangoModelFormMutation):
-            class Meta:
-                form_class = FilmDetailsForm
-                model = FilmDetails
-
-        self.assertEqual(FilmDetailsMutation._meta.model, FilmDetails)
-        self.assertEqual(FilmDetailsMutation._meta.return_field_name, "filmDetails")
-
     def test_custom_return_field_name(self):
         class PetMutation(DjangoModelFormMutation):
             class Meta:
