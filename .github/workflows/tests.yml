@@ -9,7 +9,7 @@ jobs:
       max-parallel: 4
       matrix:
         django: ["2.0", "2.1", "2.2", "3.0", "master"]
-        python-version: ["2.7", "3.6", "3.7", "3.8"]
+        python-version: ["3.6", "3.7", "3.8"]
         include:
           - django: "1.11"
             python-version: "2.7"
