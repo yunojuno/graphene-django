@@ -3,7 +3,7 @@ import warnings
 
 from django.test import Client, TestCase, TransactionTestCase
 
-DEFAULT_GRAPHQL_URL = "/graphql"
+DEFAULT_GRAPHQL_URL = "/graphql/"
 
 
 def graphql_query(
@@ -32,7 +32,7 @@ def graphql_query(
                                       "HTTP_" (e.g. to specify the "Authorization" HTTP header,
                                       use "HTTP_AUTHORIZATION" as the key).
         client (django.test.Client) - Test client. Defaults to django.test.Client.
-        graphql_url (string)        - URL to graphql endpoint. Defaults to "/graphql".
+        graphql_url (string)        - URL to graphql endpoint. Defaults to "/graphql/".
 
     Returns:
         Response object from client
